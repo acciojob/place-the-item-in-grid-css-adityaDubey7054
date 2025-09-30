@@ -1,21 +1,71 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Design</title>
+    <style>
+        /* Basic page styling for better visibility */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
 
+        /* Styles for the grid container */
+        .holder {
+            /* Set the dimensions of the grid container */
+            width: 200px;
+            height: 200px;
+
+            /* Define the element as a grid container */
+            display: grid;
+
+            /* Use the repeat() function to create two equal-width columns */
+            grid-template-columns: repeat(2, 1fr);
+
+            /* Use the repeat() function to create two equal-height rows */
+            grid-template-rows: repeat(2, 1fr);
+
+            /* Optional: Add a gap between grid items for better visualization */
+            gap: 5px;
+            border: 2px solid #333;
+        }
+
+        /* Styles for the grid items.
+        As per the instructions, no positioning or sizing properties are altered here.
+        These styles are purely for visibility.
+        */
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        /* Different background colors for each item to make them distinct */
+        .item-1 { background-color: #e57373; } /* Red */
+        .item-2 { background-color: #81c784; } /* Green */
+        .item-3 { background-color: #64b5f6; } /* Blue */
+        .item-4 { background-color: #ffd54f; } /* Yellow */
+
+    </style>
+</head>
 <body>
+
+    <!-- The grid container -->
     <div class="holder">
-    	<div class="item item-1">1</div>
-    	<div class="item item-2">2</div>
-    	<div class="item item-3">3</div>
-    	<div class="item item-4">4</div>
-   </div>
-   <script type="text/javascript" src="./script.js">
-</script>
+        <!-- The grid items, which will be placed automatically -->
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+    </div>
 
 </body>
-
 </html>
+
